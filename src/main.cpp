@@ -6,7 +6,7 @@ int main()
     LinearList list(6);
     LinearList list2;
     LinearList concatenatedList;
-    LinearList cinList(6);
+    LinearList cinList(10);
 
     list.addNode('a');
     list.addNode('b');
@@ -15,14 +15,20 @@ int main()
     // Copy constructor and '=' overloading
     list2 = list;
 
+    list2.pop();
+    list2.shift();
+
+    cout << "First list with NO changes: " << list << endl;
+    cout << "Second list with changes: " << list2 << endl << endl;
+
     // '+' overloading
     concatenatedList = list + list2;
 
     // '<<' overloading
-    cout << concatenatedList;
+    cout << "list + list2: " << concatenatedList << endl << endl;
 
     // '>>' overloading
     cin >> cinList;
 
-    cout << cinList;
+    cout << "\nList created by using '>>' overloading: " << cinList << endl;
 }

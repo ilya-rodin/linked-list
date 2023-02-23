@@ -180,7 +180,6 @@ void LinearList::displayList()
         throw "List is empty";
     }
 
-    cout << "List: ";
     while (i != -1)
     {
         cout << base[i].elem << " ";
@@ -218,13 +217,12 @@ ostream& operator<<(ostream& out, LinearList& list)
 {
     int i = list.beginData;
 
-    out << "List: ";
     while (i != -1)
     {
         out << list.base[i].elem << " ";
         i = list.base[i].next;
     }
-    out << "\n";
+
     return out;
 }
 
@@ -234,13 +232,6 @@ istream& operator>>(istream& in, LinearList& list)
     {
         throw "List is full!";
     }
-
-    // char newElem;
-
-    // cout << "Enter data (\\ to exit): ";
-    // in >> newElem;
-
-    // list.addNode(newElem);
 
     while (true)
     {
