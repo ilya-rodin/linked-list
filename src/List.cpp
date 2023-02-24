@@ -11,7 +11,7 @@ LinearList::LinearList(const LinearList& otherList)
 
     if (!base)
     {
-        throw "base is not defined!";
+        throw "base is not assigned!";
     }
 
     for (int i = 0; i < otherList.capacity; i++)
@@ -30,7 +30,7 @@ LinearList::LinearList(const int capacity)
 
     if (!base)
     {
-        throw "base is not defined!";
+        throw "base is not assigned!";
     }
 
     for (int i = 0; i < this->capacity; i++)
@@ -78,7 +78,7 @@ LinearList& LinearList::operator=(const LinearList& otherList)
         beginData = 0;
         if (!base)
         {
-            throw "base is not defined!";
+            throw "base is not assigned!";
         }
 
         for (int i = 0; i < otherList.capacity; i++)
@@ -125,7 +125,7 @@ char LinearList::shift()
 
     if (base[beginData].elem == 0)
     {
-        throw "wtf that russian dog said?";
+        throw "List is already empty";
     }
 
     indexDelElem = beginData;
@@ -234,13 +234,6 @@ istream& operator>>(istream& in, LinearList& list)
     {
         throw "List is full!";
     }
-
-    // char newElem;
-
-    // cout << "Enter data (\\ to exit): ";
-    // in >> newElem;
-
-    // list.addNode(newElem);
 
     while (true)
     {
