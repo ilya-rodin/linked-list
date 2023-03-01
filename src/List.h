@@ -15,7 +15,7 @@ private:
     Element* base;
     int beginData;
     int beginFreeSpace = 0;
-    int capacity = 0;
+    int capacity;
 
 public:
     LinearList(const LinearList&);

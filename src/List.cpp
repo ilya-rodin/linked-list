@@ -125,7 +125,7 @@ char LinearList::shift()
 
     if (base[beginData].elem == 0)
     {
-        throw "wtf that russian dog said?";
+        throw "Nothing to delete";
     }
 
     indexDelElem = beginData;
