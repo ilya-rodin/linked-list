@@ -171,22 +171,22 @@ char LinearList::pop()
     return elem;
 }
 
-void LinearList::displayList()
-{
-    int i = beginData;
+// void LinearList::displayList()
+// {
+//     int i = beginData;
 
-    if (base[i].elem == 0 || i == -1)
-    {
-        throw "List is empty";
-    }
+//     if (base[i].elem == 0 || i == -1)
+//     {
+//         throw "List is empty";
+//     }
 
-    while (i != -1)
-    {
-        cout << base[i].elem << " ";
-        i = base[i].next;
-    }
-    cout << endl;
-}
+//     while (i != -1)
+//     {
+//         cout << base[i].elem << " ";
+//         i = base[i].next;
+//     }
+//     cout << endl;
+// }
 
 int LinearList::len()
 {
